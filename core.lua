@@ -241,7 +241,7 @@ function MyChatAlert.alertFrame.AddEntry(num, alert, parent)
     local alertNum = MyChatAlert.alertFrame.NewLabel(num .. L["Number delimiter"], 0.04, parent)
     local alertChan = MyChatAlert.alertFrame.NewLabel(alert.channel, 0.17, parent)
     local alertWord = MyChatAlert.alertFrame.NewLabel(alert.word, 0.11, parent)
-    local alertAuthor = MyChatAlert.alertFrame.NewIntLabel(alert.author, 0.13, function(button) ChatFrame_OpenChat(format(L["/w %s "], alert.author)) end, parent)
+    local alertAuthor = MyChatAlert.alertFrame.NewIntLabel(alert.author, 0.13, function(button) ChatFrame_OpenChat(format(L["/w %s %s"], alert.author, self.db.profile.whisperMessage)) end, parent)
     local alertMsg = MyChatAlert.alertFrame.NewLabel(alert.msg, 0.55, parent)
 end
 

@@ -26,6 +26,7 @@ MyChatAlert.defaults = {
         filterWords = {},
         ignoredAuthors = {},
         globalIgnoreListFilter = false,
+        whisperMessage = "";
     }
 }
 
@@ -457,6 +458,28 @@ MyChatAlert.options = {
                     },
                 },
                 --]]
+            },
+        },
+        whisperTab = {
+            name = L["Whisper"],
+            type = "group", order = 6,
+            args = {
+                whisper = {
+                    name = L["Whisper"],
+                    type = "group", inline = true, order = 1,
+                    args = {
+                        whisperMessage = {
+                            name = L["Whisper Message"],
+                            desc = L["Set whisper message."],
+                            type = "input", order = 1, width = "full",
+                            get = function(info) return MyChatAlert.db.profile.whisperMessage end,
+                            set = function(info, val)
+                                if val == nil then MyChatAlert.db.profile.whisperMessage = ""
+                                else MyChatAlert.db.profile.whisperMessage = val end end,
+                            disabled = function() return not MyChatAlert.db.profile.enabled end,
+                        },
+                    },
+                },
             },
         },
     },

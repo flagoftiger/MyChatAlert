@@ -1,6 +1,6 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("MyChatAlert", "enUS", true)
 
-L["/w %s "] = true -- string for whispering a player, needs a trailing space
+L["/w %s %s"] = true -- string for whispering a player, needs a trailing space
 L["Add a channel to watch from Ex: '4. LookingForGroup'"] = true
 L["Add a keyword to watch for"] = true
 L["Add a name to ignore"] = true
@@ -91,6 +91,7 @@ L["Select a keyword to remove from being watched for"] = true
 L["Select a name to remove from being ignored"] = true
 L["Select Channel"] = true
 L["Select New Channel"] = true
+L["Set whisper message."] = true
 L["Sound"] = true
 L["Sound id to play (can be browsed on Wowhead.com)"] = true
 L["System"] = true
@@ -101,6 +102,7 @@ L["Toggle alerts on"] = true
 L["Triggers"] = true
 L["Where to output printed alerts"] = true
 L["Whisper"] = true
+L["Whisper Message"] = true
 L["Yell"] = true
 L["You have %s alert"] = "You have |cFF00FF00%s|cFFCFCFCF alert"
 L["You have %s alerts"] = "You have |cFF00FF00%s|cFFCFCFCF alerts"
